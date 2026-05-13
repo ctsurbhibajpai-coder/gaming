@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background-color: #101415;
+    background-color: #000000;
     color: #e0e3e5;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
@@ -71,7 +71,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .myth-wrapper {
@@ -80,7 +80,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .myth-card:hover .myth-wrapper {
@@ -107,7 +107,7 @@
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
   );
-  border-radius: 12px;
+  border-radius: 0px;
 }
 .myth-wrapper::after {
   bottom: 0;
@@ -118,7 +118,7 @@
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
   );
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .myth-card:hover .myth-wrapper::before,
@@ -177,4 +177,132 @@
 
 .hover-glitch:hover {
   animation: glitch-skew 0.4s step-end infinite;
+}
+
+@keyframes shine-sweep {
+  0% { left: -100%; opacity: 0; }
+  20% { opacity: 0.5; }
+  40% { left: 100%; opacity: 0; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine-sweep 3s infinite;
+  pointer-events: none;
+}
+
+/* --- Cinematic Testimonials --- */
+.testimonial-text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(178, 9, 35, 0.2);
+}
+
+.testimonial-avatar-glow {
+  box-shadow: 0 0 30px rgba(178, 9, 35, 0.3);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+/* --- Hero Fire Particles --- */
+@keyframes fire-rise {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+.fire-particle {
+  position: absolute;
+  background: radial-gradient(circle, #ff4d00 0%, #ff9500 50%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(1px);
+  box-shadow: 0 0 10px #ff4d00;
+  animation: fire-rise linear infinite;
+}
+
+/* --- Hero Wind/Air Blowing --- */
+@keyframes wind-flow {
+  0% { transform: translateX(-100%) skewX(-45deg); opacity: 0; }
+  50% { opacity: 0.1; }
+  100% { transform: translateX(200%) skewX(-45deg); opacity: 0; }
+}
+
+.wind-sweep {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: wind-flow 6s linear infinite;
+  pointer-events: none;
+}
+
+.hero-image-sharp {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.05) brightness(1.02); /* Subtle pop to reduce perceived blur */
+  object-position: center 15%; /* Show heads, avoid cutting at top */
+  transform: scale(1.02) !important; /* Slight zoom to provide padding */
+}
+
+@keyframes border-top {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes border-right {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+@keyframes border-bottom {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes border-left {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.animate-border-top { animation: border-top 4s linear infinite; }
+.animate-border-right { animation: border-right 4s linear infinite; animation-delay: 1s; }
+.animate-border-bottom { animation: border-bottom 4s linear infinite; animation-delay: 2s; }
+.animate-border-left { animation: border-left 4s linear infinite; animation-delay: 3s; }
+
+@keyframes scan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-scan-line {
+  animation: scan 4s linear infinite;
 }

@@ -13,7 +13,17 @@ export default {
       borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"},
       spacing: {base: "8px", gutter: "24px", "stack-lg": "80px", "stack-md": "32px", "stack-sm": "16px", "margin-x": "64px", "container-max": "1440px"},
       fontFamily: {h3: ["Space Grotesk"], h2: ["Space Grotesk"], "body-md": ["Inter"], "body-lg": ["Inter"], "label-caps": ["Space Grotesk"], h1: ["Space Grotesk"]},
-      fontSize: {h3: ["32px", {lineHeight: "1.2", fontWeight: "600"}], h2: ["clamp(48px, 5vw, 72px)", {lineHeight: "1.1", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-caps": ["14px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600"}], h1: ["72px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}]}
+      fontSize: {h3: ["32px", {lineHeight: "1.2", fontWeight: "600"}], h2: ["clamp(48px, 5vw, 72px)", {lineHeight: "1.1", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-caps": ["14px", {lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600"}], h1: ["72px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}]},
+      keyframes: {
+        shine: {
+          '0%': { transform: 'translateX(-150%) skewX(-20deg)' },
+          '50%': { transform: 'translateX(150%) skewX(-20deg)' },
+          '100%': { transform: 'translateX(150%) skewX(-20deg)' },
+        }
+      },
+      animation: {
+        shine: 'shine 3s infinite',
+      }
     },
   },
   plugins: [],
