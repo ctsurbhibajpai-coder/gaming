@@ -12,6 +12,7 @@ import cursedThumb from "./assets/Saved_Frame_from_Cursed_Region_202605041308.jp
 import heroImageNew from "./assets/hero image 1.jpeg";
 import brandLogo from "./assets/logo.png";
 import ctaImage from "./assets/CTA image.png";
+import characterSectionBg from "./assets/character_section_bg.jpg";
 
 import mapSerpent from "./assets/map_serpent.jpg";
 import mapKraken from "./assets/map_kraken.jpg";
@@ -24,6 +25,27 @@ import themeNova from "./assets/Desert_Dust_game_mode_theme_202605080311.jpeg";
 import blogRealTime from "./assets/Real-time.jpg";
 import blogAI from "./assets/AI image.avif";
 import blogVR from "./assets/VR Image 2.jpg";
+
+import charGeraltStatic from "./assets/Image 1.png";
+import charCiriStatic from "./assets/Image 2.png";
+import charYenneferStatic from "./assets/Image 3.png";
+import charTrissStatic from "./assets/Image 4.png";
+import charDandelionStatic from "./assets/Image 5.png";
+import charEredinStatic from "./assets/Image 6.png";
+
+import charGeraltPosture from "./assets/Character Posture/Geralt.png";
+import charCiriPosture from "./assets/Character Posture/CIRI.png";
+import charYenneferPosture from "./assets/Yennefer 2.png";
+import charTrissPosture from "./assets/Character Posture/Triss.png";
+import charDandelionPosture from "./assets/Character Posture/Dandelion.png";
+import charEredinPosture from "./assets/Eredin 2.png";
+
+import symGeralt from "./assets/Character Symbol/Geralt.svg";
+import symCiri from "./assets/Character Symbol/CIRI.svg";
+import symYennefer from "./assets/Character Symbol/Yennefer.svg";
+import symTriss from "./assets/Character Symbol/Triss.svg";
+import symDandelion from "./assets/Character Symbol/Dandelion.svg";
+import symEredin from "./assets/Character Symbol/Eredin.svg";
 
 const PATHS = [
   {
@@ -145,17 +167,17 @@ const BLOG_POSTS = [
     date: "May 08, 2024",
     author: "Leo Vance",
     excerpt: "New haptic feedback technology is blurring the lines between virtual damage and physical sensation, creating true tactical immersion.",
-    image: "C:\\Users\\vraj\\.gemini\\antigravity\\brain\\3352abc9-ca4a-4b71-a05a-1726d0b22f2b\\haptic_suit_blog_1778619350748.png"
+    image: blogVR // Reusing VR asset for consistency as the previous path was broken
   }
 ];
 
 const CHARACTERS = [
-  { id: 0, name: "Geralt", bgName: "GERALT_R", role: "Witcher", description: "Geralt of Rivia is a legendary Witcher of the School of the Wolf. A seasoned monster slayer who navigates a world of moral ambiguity.", image: "/image1.png", skills: [{name: "Pulse Scan", icon: "radar"}, {name: "Suppressive Fire", icon: "whatshot"}, {name: "Combat Roll", icon: "change_circle"}, {name: "Frag Storm", icon: "rocket_launch"}] },
-  { id: 1, name: "Ciri", bgName: "CIRILLA_", role: "Child of Destiny", description: "Cirilla Fiona Elen Riannon is the princess of Cintra and Geralt's adopted daughter, possessing immense power over space and time.", image: "/image2.png", skills: [{name: "Shadow Blink", icon: "bolt"}, {name: "Silent Reaper", icon: "visibility_off"}, {name: "Smoke Shroud", icon: "cloud"}, {name: "Ghost Protocol", icon: "security"}] },
-  { id: 2, name: "Yennefer", bgName: "YENNEFER", role: "Sorceress", description: "Yennefer of Vengerberg is a sorceress of unfathomable power and acts like it — unless in the company of her adopted daughter Ciri or once-love Geralt, of course.", image: "/image3.png", skills: [{name: "Titan Barrage", icon: "swords"}, {name: "Kinetic Shield", icon: "shield"}, {name: "Groundbreaker", icon: "volcano"}, {name: "Overclock Mode", icon: "speed"}] },
-  { id: 3, name: "Triss", bgName: "TRISS_M_", role: "Mage", description: "Triss Merigold of Maribor is a legendary sorceress and a close friend to Geralt, known for her mastery of fire and healing magic.", image: "/image4.png", skills: [{name: "Crimson Veil", icon: "bloodtype"}, {name: "Mind Fracture", icon: "psychology"}, {name: "Royal Execution", icon: "gavel"}, {name: "Domination Field", icon: "wifi_tethering"}] },
-  { id: 4, name: "Dandelion", bgName: "DANDELIO", role: "Bard", description: "Julian Alfred Pankratz, Viscount de Lettenhove, better known as Dandelion, is a famous bard, poet, and Geralt's best friend.", image: "/image5.png", skills: [{name: "Deadeye Lock", icon: "track_changes"}, {name: "Phase Step", icon: "double_arrow"}, {name: "Neuro Shot", icon: "colorize"}, {name: "Night Hunt", icon: "dark_mode"}] },
-  { id: 5, name: "Eredin", bgName: "EREDIN_B", role: "King of Wild Hunt", description: "Eredin Bréacc Glas is the commander of the Wild Hunt, a terrifying force of spectral riders seeking to capture Ciri for her blood.", image: "/image6.png", skills: [{name: "Restoration Pulse", icon: "health_and_safety"}, {name: "Toxic Bloom", icon: "coronavirus"}, {name: "Nano Surge", icon: "memory"}, {name: "Revival Beacon", icon: "cell_tower"}] }
+  { id: 0, name: "Geralt", bgName: "GERALT_R", role: "Witcher", description: "Geralt of Rivia is a legendary Witcher of the School of the Wolf. A seasoned monster slayer who navigates a world of moral ambiguity.", image: charGeraltStatic, postureImage: charGeraltPosture, symbol: symGeralt, skills: [{name: "Pulse Scan", icon: "radar"}, {name: "Suppressive Fire", icon: "whatshot"}, {name: "Combat Roll", icon: "change_circle"}, {name: "Frag Storm", icon: "rocket_launch"}] },
+  { id: 1, name: "Ciri", bgName: "CIRILLA_", role: "Child of Destiny", description: "Cirilla Fiona Elen Riannon is the princess of Cintra and Geralt's adopted daughter, possessing immense power over space and time.", image: charCiriStatic, postureImage: charCiriPosture, symbol: symCiri, skills: [{name: "Shadow Blink", icon: "bolt"}, {name: "Silent Reaper", icon: "visibility_off"}, {name: "Smoke Shroud", icon: "cloud"}, {name: "Ghost Protocol", icon: "security"}] },
+  { id: 2, name: "Yennefer", bgName: "YENNEFER", role: "Sorceress", description: "Yennefer of Vengerberg is a sorceress of unfathomable power and acts like it — unless in the company of her adopted daughter Ciri or once-love Geralt, of course.", image: charYenneferStatic, postureImage: charYenneferPosture, symbol: symYennefer, skills: [{name: "Titan Barrage", icon: "swords"}, {name: "Kinetic Shield", icon: "shield"}, {name: "Groundbreaker", icon: "volcano"}, {name: "Overclock Mode", icon: "speed"}] },
+  { id: 3, name: "Triss", bgName: "TRISS_M_", role: "Mage", description: "Triss Merigold of Maribor is a legendary sorceress and a close friend to Geralt, known for her mastery of fire and healing magic.", image: charTrissStatic, postureImage: charTrissPosture, symbol: symTriss, skills: [{name: "Crimson Veil", icon: "bloodtype"}, {name: "Mind Fracture", icon: "psychology"}, {name: "Royal Execution", icon: "gavel"}, {name: "Domination Field", icon: "wifi_tethering"}] },
+  { id: 4, name: "Dandelion", bgName: "DANDELIO", role: "Bard", description: "Julian Alfred Pankratz, Viscount de Lettenhove, better known as Dandelion, is a famous bard, poet, and Geralt's best friend.", image: charDandelionStatic, postureImage: charDandelionPosture, symbol: symDandelion, skills: [{name: "Deadeye Lock", icon: "track_changes"}, {name: "Phase Step", icon: "double_arrow"}, {name: "Neuro Shot", icon: "colorize"}, {name: "Night Hunt", icon: "dark_mode"}] },
+  { id: 5, name: "Eredin", bgName: "EREDIN_B", role: "King of Wild Hunt", description: "Eredin Bréacc Glas is the commander of the Wild Hunt, a terrifying force of spectral riders seeking to capture Ciri for her blood.", image: charEredinStatic, postureImage: charEredinPosture, symbol: symEredin, skills: [{name: "Restoration Pulse", icon: "health_and_safety"}, {name: "Toxic Bloom", icon: "coronavirus"}, {name: "Nano Surge", icon: "memory"}, {name: "Revival Beacon", icon: "cell_tower"}] }
 ];
 
 const TESTIMONIALS = [
@@ -268,11 +290,61 @@ const SectionHeading = ({ title, className = "" }: { title: string; className?: 
   </div>
 );
 
+const EncryptedText = ({ text, speedMultiplier = 1, className = "" }: { text: string, speedMultiplier?: number, className?: string }) => {
+  const [displayText, setDisplayText] = useState(text);
+  const spanRef = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const element = spanRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          
+          let iteration = 0;
+          const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*<>/?";
+          
+          const interval = setInterval(() => {
+            setDisplayText(
+              text
+                .split("")
+                .map((letter, index) => {
+                  if (index < iteration) {
+                    return text[index];
+                  }
+                  if (letter === " ") return " ";
+                  return letters[Math.floor(Math.random() * letters.length)];
+                })
+                .join("")
+            );
+            
+            if (iteration >= text.length) {
+              clearInterval(interval);
+            }
+            
+            // Scale decryption speed based on text length so long paragraphs don't take forever
+            iteration += Math.max(1 / 2, text.length / 30) * speedMultiplier;
+          }, 30);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [text, speedMultiplier]);
+
+  return <span ref={spanRef} className={className}>{displayText}</span>;
+};
+
 export default function App() {
   const [activeTheme, setActiveTheme] = useState(0);
   const [activeGameMode, setActiveGameMode] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(1);
-  const [activeLegend, setActiveLegend] = useState(2); // Default to Yennefer like image
+  const [activeLegend, setActiveLegend] = useState(2);
   const [activeCharAbility, setActiveCharAbility] = useState(0);
   const [currentMapIndex, setCurrentMapIndex] = useState(0);
   
@@ -343,7 +415,7 @@ export default function App() {
     };
   }, []);
 
-  const [mapScale, setMapScale] = useState(1);
+  const [mapScale, setMapScale] = useState(1.5);
   const [mapPosition, setMapPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -371,10 +443,10 @@ export default function App() {
 {/*  TopNavBar  */}
 <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
 <div className="flex justify-between items-center py-4 w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">
-<div className="flex items-center gap-5 group cursor-pointer select-none">
+<a href="#hero" className="flex items-center gap-5 group cursor-pointer select-none">
   {/* Brand Logo */}
   <img src={brandLogo} alt="Battle of the Arena Logo" className="h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
-  </div>
+  </a>
 <div className="hidden md:flex gap-8 items-center">
 <a className="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-white border-b-2 border-transparent hover:border-white pb-1 transition-all" href="#">LORE</a>
 <a className="font-['Space_Grotesk'] tracking-tighter uppercase font-bold text-white border-b-2 border-transparent hover:border-white pb-1 transition-all" href="#">HEROES</a>
@@ -392,7 +464,7 @@ export default function App() {
 </div>
 </nav>
 {/*  Section 1: Hero  */}
-<section className="relative h-screen flex flex-col justify-center overflow-hidden">
+<section id="hero" className="relative h-screen flex flex-col justify-center overflow-hidden">
 <div className="absolute inset-0 z-0">
 <img className="w-full h-full object-cover hero-image-sharp" data-alt="high resolution cinematic hero image" src={heroImageNew}/>
 
@@ -429,7 +501,7 @@ export default function App() {
     <span className="text-5xl md:text-6xl lg:text-7xl xl:text-[140px]">ARENA</span>
   </h1>
   <div className="mt-12 lg:mt-16 flex flex-col md:flex-row gap-6 items-center">
-    <PrimaryCTA className="px-16 py-6 text-xl lg:text-2xl tracking-[0.1em]">
+    <PrimaryCTA className="px-10 py-4 text-lg lg:text-xl tracking-[0.1em]">
   DEPLOY FOR FREE
 </PrimaryCTA>
     <div className="flex flex-col">
@@ -452,7 +524,19 @@ export default function App() {
 </section>
 {/*  Section 2: Battle Legends (Interactive Characters)  */}
 <section className="py-32 bg-[#050505] relative overflow-hidden border-b border-white/5">
-  <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,_#B2092322_0%,_transparent_70%)]"></div>
+  {/* Cinematic Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src={characterSectionBg} 
+      className="w-full h-full object-cover opacity-40 mix-blend-luminosity scale-110" 
+      alt="Section Background"
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505] z-10"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505] z-10"></div>
+    <div className="absolute inset-0 bg-[#050505]/40 z-10"></div>
+  </div>
+  
+  <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,_#B2092322_0%,_transparent_70%)] z-10"></div>
   
   <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 relative z-10">
     {/* Decorative Heading */}
@@ -774,81 +858,113 @@ export default function App() {
         >
 
 
+
+
           {/* Left Side: Character Image with Atmospheric Aura */}
           <div className="w-full md:w-1/2 h-1/2 md:h-full relative flex items-center justify-center z-10 pt-10">
+             {/* Character Symbol Behind Character */}
+             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+               <img 
+                 src={char.symbol} 
+                 className="w-[80%] h-auto opacity-10 scale-110"
+                 style={{ 
+                   filter: `drop-shadow(0 0 50px ${accents[idx]}44) brightness(1.8) contrast(1.5)`,
+                   transition: 'transform 2s ease-in-out'
+                 }}
+                 alt={`${char.name} Symbol`}
+               />
+             </div>
+
              <div className="absolute w-[100%] h-[100%] opacity-20 blur-[150px] animate-pulse pointer-events-none" 
                   style={{ background: `radial-gradient(circle, ${accents[idx]} 0%, transparent 70%)` }}></div>
              
              <div className="relative group/portrait h-full flex items-center justify-center">
-                <img src={char.image} 
-                     className="h-[75vh] w-auto object-contain relative z-10 transition-all duration-700 group-hover/portrait:scale-105" 
+
+                <img src={char.postureImage} 
+                     className="ability-char-img h-[82vh] w-auto object-contain relative z-20 opacity-85 transition-all duration-1000 group-hover/portrait:scale-105 will-change-transform" 
+                     style={{ 
+                       filter: `drop-shadow(0 0 50px ${accents[idx]}33) contrast(1.05) brightness(0.9)`,
+                     }}
                      alt={char.name} />
+                
+                {/* Secondary 'Aura' Glow for energy swirls */}
+                <div className="absolute inset-0 z-10 opacity-40 blur-[100px] animate-pulse pointer-events-none"
+                     style={{ background: `radial-gradient(circle, ${accents[idx]} 0%, transparent 70%)` }}></div>
              </div>
           </div>
 
           {/* Content Wrapper */}
-          <div className="relative z-10 w-full md:w-1/2 flex flex-col items-start justify-center p-8 md:p-16 md:pl-10 lg:pl-20 h-full text-left">
+          <div className="relative z-10 w-full md:w-1/2 flex flex-col items-start justify-center p-8 md:p-16 md:pl-10 lg:pl-20 h-full text-left group/content">
             
-            {/* Background branding text (subtle) */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 text-white/[0.01] text-[40vw] font-black pointer-events-none select-none uppercase italic tracking-tighter -z-10">
-              {char.name.charAt(0)}
-            </div>
-
-            {/* Role Badge */}
-            <div className="mb-6 animate-fade-in">
-              <span className="bg-[#2c3139] text-white text-[11px] font-black px-4 py-1.5 uppercase tracking-widest rounded-sm border border-white/5">
-                {char.role}
-              </span>
-            </div>
-
-            {/* Name & Stats Row */}
-            <div className="flex items-baseline gap-6 mb-8 flex-wrap">
-              <div className="relative">
-                <span className="absolute -top-4 -left-6 text-[10px] font-black text-white/20 rotate-90 origin-bottom-left">0{idx + 1}</span>
-                <h3 className="text-7xl md:text-9xl font-black text-white uppercase tracking-tighter leading-none font-['Space_Grotesk'] drop-shadow-2xl">
-                  {char.name}
-                </h3>
+            {/* Minimal Header */}
+            <div className="mb-4 flex flex-col gap-3">
+              <div className="flex items-center gap-4">
+                <div className="w-8 h-[1px] bg-primary"></div>
+                <span className="text-primary text-[10px] font-black uppercase tracking-[0.3em] min-h-[14px]">
+                  <EncryptedText text={char.role} speedMultiplier={6} />
+                </span>
               </div>
-              <div className="flex flex-col border-l border-white/10 pl-6">
-                <span className="text-white text-2xl font-black tracking-widest leading-none mb-1">13.8 / 14.9 / 6.9</span>
-                <span className="text-white/40 text-[10px] font-black uppercase tracking-widest">AVG KDA</span>
+              
+              <h3 className="text-6xl md:text-8xl lg:text-[100px] font-black italic text-white uppercase tracking-tighter leading-none font-['Space_Grotesk'] min-h-[100px]">
+                <EncryptedText text={char.name} speedMultiplier={0.3} />
+              </h3>
+            </div>
+
+            {/* Subtle Stats Row */}
+            <div className="flex items-center gap-6 mb-6 text-[10px] font-black uppercase tracking-[0.2em]">
+              <div className="flex items-center gap-2">
+                <span className="text-white/30">KDA</span>
+                <span className="text-white"><EncryptedText text="13.8" speedMultiplier={6} /></span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-white/10"></div>
+              <div className="flex items-center gap-2">
+                <span className="text-white/30">WR</span>
+                <span className="text-white"><EncryptedText text="54%" speedMultiplier={6} /></span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-white/10"></div>
+              <div className="flex items-center gap-2">
+                <span className="text-white/30">ROLE</span>
+                <span className="text-white"><EncryptedText text={char.role} speedMultiplier={6} /></span>
               </div>
             </div>
 
             {/* Bio */}
-            <p className="text-white/60 text-sm md:text-base leading-relaxed mb-12 max-w-xl font-medium">
-              {char.description}
+            <p className="text-white/50 text-sm md:text-base leading-relaxed mb-8 max-w-md font-light min-h-[80px]">
+              <EncryptedText text={char.description} speedMultiplier={6} />
             </p>
 
-            {/* Ability Icons Row */}
-            <div className="flex gap-4 mb-10">
+            {/* Minimal Ability Icons */}
+            <div className="flex gap-8 mb-8">
               {char.skills.map((skill: any, sIdx: number) => (
-                <div key={sIdx} className={`w-16 h-16 border transition-all duration-300 cursor-pointer flex items-center justify-center group/skill-icon ${sIdx === 0 ? 'border-white bg-white/10' : 'border-white/10 bg-black/40 hover:border-white/40 hover:bg-white/5'}`}>
-                   <span className={`material-symbols-outlined text-3xl transition-colors ${sIdx === 0 ? 'text-white' : 'text-white/40 group-hover/skill-icon:text-white/80'}`}>
-                     {skill.icon}
-                   </span>
-                   {sIdx === 0 && <div className="absolute -bottom-2 w-1.5 h-1.5 bg-white rotate-45"></div>}
+                <div key={sIdx} className="flex flex-col items-center gap-4 group cursor-pointer">
+                  <div className="relative w-12 h-12 flex items-center justify-center transition-all duration-300 text-white/30 group-hover:text-primary">
+                     <div className="absolute inset-0 border border-primary/30 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-[spin_4s_linear_infinite] transition-all duration-300"></div>
+                     <span className="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform duration-300">
+                       {skill.icon}
+                     </span>
+                  </div>
+                  <span className="text-[9px] font-bold uppercase tracking-widest transition-colors text-transparent group-hover:text-primary">
+                     {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
 
-            {/* Ability Details */}
-            <div className="mb-14 border-t border-white/5 pt-8 max-w-xl">
-               <h4 className="text-white font-black text-lg uppercase tracking-widest mb-4 flex items-center gap-3">
-                  <span className="text-primary font-black">Q</span>
-                  <span className="w-4 h-[1px] bg-white/20"></span>
+            {/* Active Ability Info */}
+            <div className="max-w-md mb-8">
+               <h4 className="text-white font-black text-[11px] uppercase tracking-[0.2em] mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                   {char.skills[0].name}
                </h4>
-               <p className="text-white/40 text-sm md:text-base leading-relaxed">
-                 EQUIP a tactical advantage. ACTIVATE to deploy a specialized {char.role.toLowerCase()} field that neutralizes incoming threats and provides area denial for the squad in high-stakes combat scenarios.
+               <p className="text-white/40 text-xs leading-relaxed font-light">
+                 TACTICAL DEPLOYMENT: Initialize a specialized {char.role.toLowerCase()} protocol that neutralizes incoming threats and establishes area control for the squad in high-stakes combat scenarios.
                </p>
             </div>
 
-            {/* Equip Button */}
-            <button className="group relative bg-[#ff4655] text-white font-black text-4xl px-16 py-5 uppercase tracking-tighter transition-all hover:bg-[#ff4655]/90 hover:scale-105 active:scale-95 shadow-[0_20px_40px_rgba(255,70,85,0.3)]">
-               <span className="relative z-10">EQUIP</span>
-               <div className="absolute inset-0 bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-            </button>
+            {/* Action Button */}
+            <PrimaryCTA className="px-10 py-4 text-sm md:text-base tracking-[0.2em] shadow-[0_15px_30px_rgba(255,42,74,0.3)]">
+               DEPLOY {char.name.toUpperCase()}
+            </PrimaryCTA>
             
           </div>
 
@@ -873,7 +989,7 @@ export default function App() {
            <SectionHeading title="ENGAGEMENT MAPS" />
 
            <div 
-             className={`relative h-[850px] w-full overflow-hidden group perspective-[2000px] mt-8 ${mapScale > 1 ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'}`}
+             className={`relative h-[1000px] w-full overflow-hidden group perspective-[2000px] mt-8 ${mapScale > 1 ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'}`}
              onMouseDown={handleMapDragStart}
              onMouseMove={handleMapDrag}
              onMouseUp={handleMapDragEnd}
@@ -895,52 +1011,90 @@ export default function App() {
                   
                   {/* Map Image with Zoom/Pan */}
                   <div className="relative w-full h-full flex items-center justify-center overflow-visible pointer-events-none" style={{ transformStyle: 'preserve-3d' }}>
-                    <img 
-                      src={map.image} 
-                      className="transition-transform duration-300 ease-out max-w-none select-none shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
-                      style={{ 
-                        transform: `scale(${mapScale}) translate(${mapPosition.x / mapScale}px, ${mapPosition.y / mapScale}px)`,
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'contain'
-                      }}
-                      alt={map.name}
-                    />
-
-                    {/* 3D POI Markers */}
-                    {map.pois.map((poi) => (
-                      <div 
-                        key={poi.id}
-                        className="absolute z-30 transition-all duration-500"
+                    <div className="relative pointer-events-auto">
+                      <img 
+                        src={map.image} 
+                        className="transition-transform duration-300 ease-out max-w-none select-none"
                         style={{ 
-                          left: `${poi.x}%`, 
-                          top: `${poi.y}%`,
-                          transform: `scale(${mapScale}) translate(${mapPosition.x / mapScale}px, ${mapPosition.y / mapScale}px) translateZ(0px)`,
-                          opacity: mapScale > 1.5 ? 1 : 0
+                          transform: `scale(${mapScale}) translate(${mapPosition.x / mapScale}px, ${mapPosition.y / mapScale}px)`,
+                          maxWidth: '100%',
+                          maxHeight: '100%',
+                          filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.7)) contrast(1.1) brightness(0.85)',
+                          boxShadow: 'inset 0 0 80px rgba(0,0,0,0.9)',
+                          maskImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='5'/%3E%3C/filter%3E%3Crect x='1' y='1' width='98' height='98' filter='url(%23a)' fill='black'/%3E%3C/svg%3E")`,
+                          WebkitMaskImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' preserveAspectRatio='none'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='5'/%3E%3C/filter%3E%3Crect x='1' y='1' width='98' height='98' filter='url(%23a)' fill='black'/%3E%3C/svg%3E")`,
+                          maskSize: '100% 100%',
+                          WebkitMaskSize: '100% 100%'
                         }}
-                      >
-                         <div 
-                           className="relative flex flex-col items-center group/poi"
-                           style={{ 
-                             transform: mapScale > 1.8 ? 'rotateX(-25deg) translateZ(50px)' : 'rotateX(0deg) translateZ(10px)',
-                             transformStyle: 'preserve-3d'
-                           }}
-                         >
-                            {/* Marker Pin */}
-                            <div className="w-1 h-16 bg-gradient-to-t from-primary via-primary/50 to-transparent shadow-[0_0_15px_rgba(178,9,35,0.8)]"></div>
-                            <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_20px_rgba(178,9,35,1)] border border-white/50 -mt-1"></div>
-                            
-                            {/* POI Label Label */}
-                            <div className="absolute bottom-full mb-2 whitespace-nowrap bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 scale-0 group-hover/poi:scale-100 transition-transform origin-bottom">
-                               <span className="text-[10px] font-black uppercase tracking-widest text-white">{poi.name}</span>
-                            </div>
+                        alt={map.name}
+                      />
 
-                            {/* Holographic Height Ring */}
-                            <div className="absolute bottom-0 w-8 h-8 border border-primary/40 rounded-full animate-ping opacity-20" style={{ transform: 'rotateX(90deg)' }}></div>
-                            <div className="absolute bottom-0 w-12 h-12 border border-primary/20 rounded-full animate-[pulse_3s_infinite] opacity-10" style={{ transform: 'rotateX(90deg)' }}></div>
-                         </div>
+                      {/* 3D POI Markers */}
+                      {map.pois.map((poi) => (
+                        <div 
+                          key={poi.id}
+                          className="absolute z-30 transition-all duration-500"
+                          style={{ 
+                            left: `${poi.x}%`, 
+                            top: `${poi.y}%`,
+                            transform: `scale(${mapScale}) translate(${mapPosition.x / mapScale}px, ${mapPosition.y / mapScale}px) translateZ(0px)`,
+                            opacity: mapScale > 1.5 ? 1 : 0
+                          }}
+                        >
+                           <div 
+                             className="relative flex flex-col items-center group/poi"
+                             style={{ 
+                               transform: mapScale > 1.8 ? 'rotateX(-25deg) translateZ(50px)' : 'rotateX(0deg) translateZ(10px)',
+                               transformStyle: 'preserve-3d'
+                             }}
+                           >
+                              {/* Marker Pin */}
+                              <div className="w-1 h-16 bg-gradient-to-t from-primary via-primary/50 to-transparent shadow-[0_0_15px_rgba(178,9,35,0.8)]"></div>
+                              <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_20px_rgba(178,9,35,1)] border border-white/50 -mt-1"></div>
+                              
+                              {/* POI Label Label */}
+                              <div className="absolute bottom-full mb-2 whitespace-nowrap bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 scale-0 group-hover/poi:scale-100 transition-transform origin-bottom">
+                                 <span className="text-[10px] font-black uppercase tracking-widest text-white">{poi.name}</span>
+                              </div>
+
+                              {/* Holographic Height Ring */}
+                              <div className="absolute bottom-0 w-8 h-8 border border-primary/40 rounded-full animate-ping opacity-20" style={{ transform: 'rotateX(90deg)' }}></div>
+                              <div className="absolute bottom-0 w-12 h-12 border border-primary/20 rounded-full animate-[pulse_3s_infinite] opacity-10" style={{ transform: 'rotateX(90deg)' }}></div>
+                           </div>
+                        </div>
+                      ))}
+
+                      {/* Zoom Controls (Aligned to Map Bottom-Left, but Outside) */}
+                      <div className="absolute bottom-0 -left-16 z-50 flex flex-col gap-3 pointer-events-auto opacity-50 hover:opacity-100 transition-opacity duration-300">
+                         <button 
+                           onClick={() => setMapScale(prev => Math.min(prev + 0.4, 4))}
+                           className="w-[52px] h-[52px] bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl group/zoom"
+                         >
+                            <span className="material-symbols-outlined text-white text-2xl group-hover:scale-125 transition-transform">zoom_in</span>
+                         </button>
+                         <button 
+                           onClick={() => setMapScale(prev => {
+                             const newScale = Math.max(prev - 0.4, 1.5);
+                             if (newScale === 1.5) setMapPosition({ x: 0, y: 0 });
+                             return newScale;
+                           })}
+                           className="w-[52px] h-[52px] bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl group/zoom"
+                         >
+                            <span className="material-symbols-outlined text-white text-2xl group-hover:scale-125 transition-transform">zoom_out</span>
+                         </button>
+                         <button 
+                           onClick={() => {
+                             setMapScale(1.5);
+                             setMapPosition({ x: 0, y: 0 });
+                           }}
+                           className="w-[52px] h-[52px] bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 shadow-xl group/zoom"
+                         >
+                            <span className="material-symbols-outlined text-xl font-black group-hover:rotate-180 transition-transform">restart_alt</span>
+                         </button>
                       </div>
-                    ))}
+
+
+                    </div>
                   </div>
 
                   {/* Corner Coordinates Removed */}
@@ -949,12 +1103,14 @@ export default function App() {
                 </div>
               ))}
 
+
+
               {/* Navigation Controls (Right Side) */}
-              <div className="absolute right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-10">
+              <div className="absolute right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-10 opacity-50 hover:opacity-100 transition-opacity duration-300">
                  <button 
                    onClick={() => {
                      setCurrentMapIndex((prev) => (prev > 0 ? prev - 1 : MAPS.length - 1));
-                     setMapScale(1);
+                     setMapScale(1.5);
                      setMapPosition({ x: 0, y: 0 });
                    }}
                    className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 group/nav backdrop-blur-md bg-black/20"
@@ -968,7 +1124,7 @@ export default function App() {
                         key={i}
                         onClick={() => {
                           setCurrentMapIndex(i);
-                          setMapScale(1);
+                          setMapScale(1.5);
                           setMapPosition({ x: 0, y: 0 });
                         }}
                         className="group relative flex items-center justify-end h-8"
@@ -981,7 +1137,7 @@ export default function App() {
                  <button 
                    onClick={() => {
                      setCurrentMapIndex((prev) => (prev < MAPS.length - 1 ? prev + 1 : 0));
-                     setMapScale(1);
+                     setMapScale(1.5);
                      setMapPosition({ x: 0, y: 0 });
                    }}
                    className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-primary hover:text-primary transition-all duration-300 group/nav backdrop-blur-md bg-black/20"
@@ -990,37 +1146,9 @@ export default function App() {
                  </button>
               </div>
 
-              {/* Zoom Controls (Bottom Left) */}
-              <div className="absolute bottom-12 left-12 z-50 flex flex-col gap-3">
-                 <button 
-                   onClick={() => setMapScale(prev => Math.min(prev + 0.4, 4))}
-                   className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl group/zoom"
-                 >
-                    <span className="material-symbols-outlined text-white group-hover:scale-125 transition-transform">zoom_in</span>
-                 </button>
-                 <button 
-                   onClick={() => setMapScale(prev => {
-                     const newScale = Math.max(prev - 0.4, 1);
-                     if (newScale === 1) setMapPosition({ x: 0, y: 0 });
-                     return newScale;
-                   })}
-                   className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-primary transition-all duration-300 shadow-xl group/zoom"
-                 >
-                    <span className="material-symbols-outlined text-white group-hover:scale-125 transition-transform">zoom_out</span>
-                 </button>
-                 <button 
-                   onClick={() => {
-                     setMapScale(1);
-                     setMapPosition({ x: 0, y: 0 });
-                   }}
-                   className="w-12 h-12 bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-300 shadow-xl group/zoom"
-                 >
-                    <span className="material-symbols-outlined text-sm font-black group-hover:rotate-180 transition-transform">restart_alt</span>
-                 </button>
-              </div>
 
-              {/* Scanning Line Animation */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-primary/40 shadow-[0_0_15px_rgba(178,9,35,0.8)] z-20 animate-scan-line pointer-events-none opacity-40"></div>
+
+
            </div>
         </div>
 {/*  Section 7: Battle Briefings (Blog)  */}
@@ -1245,7 +1373,7 @@ export default function App() {
           BATTLE OF THE ARENA
         </div>
         <div className="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-white/40">
-          © 2024 BATTLE OF THE ARENA. ALL RIGHTS RESERVED.
+          ┬⌐ 2024 BATTLE OF THE ARENA. ALL RIGHTS RESERVED.
         </div>
       </div>
 
